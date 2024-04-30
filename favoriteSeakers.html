@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REACT SNEAKERS || Javascriptp</title>
+    <link rel="icon" href="img/logo.svg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo__box">
+            <div class="logo__box-mini" style="cursor: pointer">
+              <a href="index.html"><img src="img/logo.svg" alt="" /></a>
+            </div>
+            <div class="logo__box-mini" style="cursor: pointer">
+              <h3 class="title">REACT SNEAKERS</h3>
+              <h4 class="title-h4">Магазин лучших кроссовок</h4>
+            </div>
+          </div>
+
+          <div class="item-icon">
+            <button class="korzina"><img src="img/k.svg" alt="" /></button>
+            <button>
+              <a href="favoriteSeakers.html"
+                ><img src="img/like.svg" alt=""
+              /></a>
+            </button>
+            <button><img src="img/accont.svg" alt="" /></button>
+          </div>
+        </nav>
+        <div class="linia"></div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- component basket -->
+      <div class="container">
+        <h2 class="box-mini-h2-two">Мои закладки</h2>
+        <div class="modal">
+          <div class="back">
+            <h2 class="modal-h2">Корзина</h2>
+            <h2 class="icon-back">
+              <button class="back-btn">
+                <i class="bx bx-arrow-back"></i> <span>назад</span>
+              </button>
+            </h2>
+          </div>
+
+          <div class="modal__box">
+            <img class="modal-img" src="img/box.png" alt="" />
+            <h3 class="modal-h3">Корзина пустая</h3>
+            <p class="modal-p">
+              Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.
+            </p>
+            <button class="modal__btn">
+              <i class="bx bx-arrow-back"></i> Вернуться назад
+            </button>
+          </div>
+        </div>
+        <div class="bg-reomov"></div>
+      </div>
+      <!-- component basket -->
+
+      <!-- this product snaekers -->
+
+      <div class="container">
+        <div class="cotalock-box2"></div>
+      </div>
+      <!-- this product snaekers -->
+
+      <!-- this favorite nall code -->
+
+      <div class="fav-nall">
+        <img class="fav-crae" src="img/crae.svg" alt="" />
+        <h3 class="fav-title">Закладок нет :(</h3>
+        <p class="fav-txt">Вы ничего не добавляли в закладки</p>
+        <button class="modal__btn">
+          <a href="index.html">
+            <i class="bx bx-arrow-back"></i> Вернуться назад</a
+          >
+        </button>
+      </div>
+
+      <!-- this favorite nall code -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="linia"></div>
+      <a href="https://t.me/DevHusan" class="my__title"
+        >Created in 2023 by Husan</a
+      >
+    </footer>
+    <!-- footer -->
+
+    <!-- js link -->
+
+    <script>
+      const cotalockBox2 = document.querySelector(".cotalock-box2");
+      const favNull = document.querySelector(".fav-nall");
+      const favoriteSneakers = JSON.parse(localStorage.getItem("fav"));
+
+      if (favoriteSneakers && favoriteSneakers.length > 0) {
+        for (let i = 0; i < favoriteSneakers.length; i++) {
+          const product = favoriteSneakers[i];
+          cotalockBox2.innerHTML += `<div class="cotalock-box-mini">
+        <i class="bx bxs-heart like active" onclick="removeFav(event, ${product.id})"></i>
+        <img class="sum-img" src="${product.img}" alt="" />
+        <p class="box-p">Мужские Кроссовки ${product.name}</p>
+        <div class="txt-box">
+          <div class="txt-box-mini">
+            <p class="sum">Цена:</p>
+            <span class="sum-span">${product.price} руб.</span>
+          </div>
+          <div class="txt-box-mini">
+            <button class="btn-add">
+              <img class="plus" src="img/plus.svg" alt="" />
+              <img class="galochka" src="img/galochka.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>`;
+
+          favNull.classList.add("active");
+        }
+      }
+
+      function removeFav(event, id) {
+        const productElement = event.target.closest(".cotalock-box-mini");
+        if (productElement) {
+          productElement.remove();
+
+          const productIndex = favoriteSneakers.findIndex(
+            (item) => item.id == id
+          );
+          if (productIndex !== -1) {
+            favoriteSneakers.splice(productIndex, 1);
+            localStorage.setItem("fav", JSON.stringify(favoriteSneakers));
+          }
+        }
+
+        if (favoriteSneakers.length === 0) {
+          favNull.classList.remove("active");
+        }
+      }
+    </script>
+
+    <!-- js link -->
+  </body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REACT SNEAKERS || Javascript</title>
+  <link rel="icon" href="img/logo.svg">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <!-- it's loading my website -->
+
+  <div class="loading">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+    <dotlottie-player class="loading2" src="https://lottie.host/ca61d2dc-9c16-4705-a0fc-f53459fa55c8/PBE1ctk7zd.json"
+      background="transparent" speed="1" style="width: 100%; max-width: 500px; min-height: 500px;" loop autoplay></dotlottie-player>
+  </div>
+
+  <!-- it's loading my website -->
+
+  <!-- ///////////////////////////////////////////////////////// -->
+
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo__box" style="cursor: pointer;">
+          <div class="logo__box-mini"><img src="img/logo.svg" alt="" /></div>
+          <div class="logo__box-mini">
+            <h3 class="title">REACT SNEAKERS</h3>
+            <h4 class="title-h4">Магазин лучших кроссовок</h4>
+          </div>
+        </div>
+
+        <div class="item-icon">
+          <button class="korzina"><img src="img/k.svg" alt="" /></button>
+          <button><a href="favoriteSeakers.html"><img src="img/like.svg" alt="" /></a></button>
+          <button><img src="img/accont.svg" alt="" /></button>
+        </div>
+      </nav>
+      <div class="linia"></div>
+
+      <div class="bg__box">
+        <div class="bg__Box-mini">
+          <img class="brand" src="img/brand.svg" alt="">
+          <h1 class="bg-title"><span>Stan Smith</span>, Forever!</h1>
+          <button class="buy">Купить</button>
+        </div>
+
+        <div class="bg__Box-mini"><img src="img/bg-cross.png" alt=""></div>
+
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+  <!-- ////////////////////////////////////////////// -->
+  <!-- main -->
+  <main class="main">
+    <div class="container">
+      <div class="main__title-box">
+        <div class="box-mini">
+          <h2 class="box-mini-h2">Все кроссовки</h2>
+        </div>
+        <div class="box-mini"><input id="searchInput" type="text" placeholder="Поиск..."></div>
+      </div>
+
+      <div class="cotalock-box">
+        <div class="cotalock-box-mini" id="product1">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/1.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Nike Blazer Mid Suede</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">12 999 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cotalock-box-mini" id="product2">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/2.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Nike Air Max 270</p>
+          <div class="txt-box">
+            <div class="txt-box-mini" id="product1">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">12 999 руб.</span>
+            </div>
+            <div class="txt-box-mini" id="product1">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product3">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/3.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Nike Blazer Mid Suede</p>
+          <div class="txt-box">
+            <div class="txt-box-mini" id="product1">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">8 499 руб.</span>
+            </div>
+            <div class="txt-box-mini" id="product1">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product4">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/4.jpg" alt="">
+          <p class="box-p">Кроссовки Puma X Aka Boku Future Rider</p>
+          <div class="txt-box">
+            <div class="txt-box-mini" id="product1">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">8 499 руб.</span>
+            </div>
+            <div class="txt-box-mini" id="product1">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product5">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/5.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Under Armour Curry 8</p>
+          <div class="txt-box">
+            <div class="txt-box-mini" id="product1">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">15 199 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product6">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/6.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Nike Kyrie 7</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">11 299 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product7">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/7.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Jordan Air Jordan 11</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">10 799 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product8">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/8.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Nike LeBron XVIII</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">16 499 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product9">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/9.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Nike Lebron XVIII Low</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">13 999 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product10">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/10.png" alt="">
+          <p class="box-p">Мужские Кроссовки Nike Blazer Mid Suede</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">8 499 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product11">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/11.png" alt="">
+          <p class="box-p">Кроссовки Puma X Aka Boku Future Rider</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">8 999 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cotalock-box-mini" id="product12">
+          <i class='bx bxs-heart like'></i>
+          <img class="sum-img" src="img/12.jpg" alt="">
+          <p class="box-p">Мужские Кроссовки Nike Kyrie Flytrap IV</p>
+          <div class="txt-box">
+            <div class="txt-box-mini">
+              <p class="sum">Цена:</p>
+              <span class="sum-span">11 299 руб.</span>
+            </div>
+            <div class="txt-box-mini">
+              <button class="btn-add">
+                <img class="plus" src="img/plus.svg" alt="">
+                <img class="galochka" src="img/galochka.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal">
+        <div class="back">
+          <h2 class="modal-h2">Корзина</h2>
+          <h2 class="icon-back"><button class="back-btn"><i class='bx bx-arrow-back'></i> <span>назад</span></button>
+          </h2>
+        </div>
+
+        <div class="modal__box">
+          <img class="modal-img" src="img/box.png" alt="">
+          <h3 class="modal-h3">Корзина пустая</h3>
+          <p class="modal-p">Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.</p>
+          <button class="modal__btn"><i class='bx bx-arrow-back'></i> Вернуться назад</button>
+        </div>
+
+        <div class="modal__box-two">
+
+        </div>
+
+        <div class="price-rel">
+          <div class="price">
+            <div class="prices"><span class="price__txt">Totall Sum:</span></div>
+            <div class="prices"><span class="price__price">0 руб</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="undefind__box">
+        <div class="undefind__product">
+          <img src="img/sad.svg" alt="" />
+          <h3 class="undefind__product-txt">продукт не найден :(</h3>
+        </div>
+      </div>
+
+      <div class="bg-reomov"></div>
+  </main>
+
+  <!-- main -->
+  <!-- ///////////////////////////////////////////// -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="linia"></div>
+    <a href="https://t.me/DevHusan" class="my__title">Created in 2023 by Husan</a>
+  </footer>
+  <!-- footer -->
+  <script src="app.js"></script>
+</body>
+
+</html>
